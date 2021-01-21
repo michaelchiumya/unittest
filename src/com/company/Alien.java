@@ -11,7 +11,7 @@
  * Author: Dr. Shane Wilson
  *
  */
-
+//Jack will take Alien and build unit tests to raygun
 package com.company;
 
 public class Alien {
@@ -23,7 +23,8 @@ public class Alien {
     //Class constructors
     public Alien(boolean dodging, int alienHealth) {
         //TODO: Construct the Alien object and initialise the data members appropriately.
-
+        //J: alienHealth > 0, or set to default value.
+        //dodging is true
     }
 
     // Methods
@@ -32,18 +33,21 @@ public class Alien {
     public void dodge() {
         //TODO: Implement the method
         /*Set dodging to true if the alien is alive*/
+        //J: alien will be able to doge once at the start, then subsequent shots will hit, as miss() sets to false.
+        //will add rng to compliment after initial code passes as expected.
 
     }
 
     public void hit() {
         //TODO: Implement the method
         /*Reduces the alien health by 1. Minimum Alien health should 0.*/
+        //j: test to see if alien is dead or not after each hit.
     }
 
     public void miss() {
         //TODO: Implement the method
         /*Sets dodging to false*/
-
+        //J: set dodging to false if if the previous shot was dodged.
     }
 
 }
