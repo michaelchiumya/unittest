@@ -48,4 +48,8 @@ public class Raygun {
         //TODO: Implement the method
         /*Returns true if the gun is fully charged*/
     }
+
+    public int getcChrg() {
+        return cChrg;
+    }
 }
