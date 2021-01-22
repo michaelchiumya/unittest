@@ -4,7 +4,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 class AlienTest {
 
@@ -20,7 +20,7 @@ class AlienTest {
     void dodge_test_case() {
         alien.dodge();
         boolean actual = alien.isDead();
-        assertEquals(false, actual);
+        assertFalse(actual);
     }
 
     @DisplayName("hit test case, Reduces the alien health by 1")
@@ -36,7 +36,7 @@ class AlienTest {
     void miss_test_case() {
         alien.miss();
         boolean actual = alien.isDodging();
-        assertEquals(false, actual);
+        assertFalse( actual);
     }
 
     @DisplayName("set dead test case, Sets dead to true if alien Health is < 0")
@@ -44,6 +44,6 @@ class AlienTest {
     void setDead_test_case() {
         alien.setDead(0);
         boolean actual = alien.isDead();
-        assertEquals(true, actual);
+        assertTrue( actual);
     }
 }

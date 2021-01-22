@@ -40,9 +40,8 @@ public class Alien  {
         /*Set dodging to true if the alien is alive*/
         //J: alien will be able to doge once at the start, then subsequent shots will hit, as miss() sets to false.
         //will add rng to compliment after initial code passes as expected.
-        if( alienHealth <= 0){
+        if( alienHealth <= 0)
             this.dodging = true;
-        }else{ this.dodging = false ;}
 
     }
 
@@ -62,9 +61,8 @@ public class Alien  {
         //TODO: Implement the method
         /*Sets dodging to false*/
         //J: set dodging to false if if the previous shot was dodged.
-        if (dodging == true){
+        if (dodging == true)
              dodging = false;
-        }
     }
 
     public boolean isDead() {
@@ -74,9 +72,7 @@ public class Alien  {
     public void setDead(int alienHealth) {
         if(alienHealth <= 0) {
              this.dead = true;
-           }else if(alienHealth >= 1){
-             dead = false;
-         }
+           }
     }
 
     public boolean isDodging() {
