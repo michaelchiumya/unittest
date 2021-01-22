@@ -29,7 +29,9 @@ public class Raygun {
     public void fireAt(Alien a) {
         //TODO: Implement the method
         /*The gun should only fire if it is charged. Firing the gun will reduce the charge by 1. If the bug isDodging
-        * bug.miss() should be called, otherwise bug.hit */
+        * bug.miss() should be called, otherwise bug.hit
+        *
+        *  */
 
     }
 
@@ -41,11 +43,12 @@ public class Raygun {
     public boolean isCharged() {
         //TODO: Implement the method
         /*Returns true if the gun has a charge*/
-
+        return false;
     }
 
     public boolean isFullyCharged() {
         //TODO: Implement the method
         /*Returns true if the gun is fully charged*/
+        return  false;
     }
 }
