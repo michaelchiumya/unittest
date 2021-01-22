@@ -14,20 +14,25 @@
 //Jack will take Alien and build unit tests to raygun
 package com.company;
 
-public class Alien {
-    //Data members
-    private boolean dead;
+public class Alien  {
+
+    private boolean dead ;
     private boolean dodging;
     private int alienHealth;
 
-    //Class constructors
-    public Alien(boolean dodging, int alienHealth) {
+
+
+    public Alien(boolean dodging, int alienHealth ) {
         //TODO: Construct the Alien object and initialise the data members appropriately.
         //J: alienHealth > 0, or set to default value.
         //dodging is true
+
+        this.dodging = dodging;
+        this.alienHealth = alienHealth;
+        this.setDead(this.alienHealth);
     }
 
-    // Methods
+
     //TODO: Implement appropriate getters and setters for the class
 
     public void dodge() {
@@ -35,6 +40,9 @@ public class Alien {
         /*Set dodging to true if the alien is alive*/
         //J: alien will be able to doge once at the start, then subsequent shots will hit, as miss() sets to false.
         //will add rng to compliment after initial code passes as expected.
+        if( alienHealth <= 0){
+            this.dodging = true;
+        }else{ this.dodging = false ;}
 
     }
 
@@ -42,12 +50,41 @@ public class Alien {
         //TODO: Implement the method
         /*Reduces the alien health by 1. Minimum Alien health should 0.*/
         //j: test to see if alien is dead or not after each hit.
+        if(this.alienHealth >= 1){
+             this.alienHealth--;
+              this.dead = false;
+        }else {
+              this.dead = true;
+        }
     }
 
     public void miss() {
         //TODO: Implement the method
         /*Sets dodging to false*/
         //J: set dodging to false if if the previous shot was dodged.
+        if (dodging == true){
+             dodging = false;
+        }
+    }
+
+    public boolean isDead() {
+        return dead;
+    }
+
+    public void setDead(int alienHealth) {
+        if(alienHealth <= 0) {
+             this.dead = true;
+           }else if(alienHealth >= 1){
+             dead = false;
+         }
+    }
+
+    public boolean isDodging() {
+        return dodging;
+    }
+
+    public int getAlienHealth() {
+        return alienHealth;
     }
 
 }
