@@ -50,4 +50,11 @@ public class Alien {
         //J: set dodging to false if if the previous shot was dodged.
     }
 
+    public int getAlienHealth() {
+        return alienHealth;
+    }
+
+    public boolean isDead() {
+        return dead;
+    }
 }
