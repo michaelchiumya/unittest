@@ -1,7 +1,7 @@
 package com.company;
 
 import org.testng.Assert;
-import org.testng.annotations.Test;
+import org.junit.jupiter.api.Test;
 
 import static org.testng.Assert.*;
 
