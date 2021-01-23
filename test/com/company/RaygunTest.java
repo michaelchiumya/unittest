@@ -1,14 +1,20 @@
 package com.company;
 
-import org.testng.Assert;
-import org.junit.jupiter.api.Test;
 
-import static org.testng.Assert.*;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class RaygunTest {
 
 
-//need to assume Alien work...
+/*NB: Due to legacy use of TestNG, assertEquals uses: actual,expected
+        However JUnit uses: expected,actual
+        no significant difference will be noted as 1==1, and 1!=0 is the same as 0!=1, but keep watch of behavior
+        Non explicit values are used for testing to allow for easier troubleshooting
+
+
+*/
+
     @Test
     public void FireAt_AlienTest_dodgingAlien_loadedGun() {
 
@@ -32,9 +38,9 @@ public class RaygunTest {
         isAlienDead = testAlien.isDead(); //check to see if dead
 
         //Assert
-        Assert.assertEquals(alienHealth, expectedAlienHealth);
-        Assert.assertEquals(rayGunAmmo, expectedRayGunAmmo);
-        Assert.assertEquals(isAlienDead, expectedAlienIsDead);
+        assertEquals(alienHealth, expectedAlienHealth);
+        assertEquals(rayGunAmmo, expectedRayGunAmmo);
+        assertEquals(isAlienDead, expectedAlienIsDead);
     }
 
     @Test
@@ -60,9 +66,9 @@ public class RaygunTest {
         isAlienDead = testAlien.isDead(); //check to see if dead
 
         //Assert
-        Assert.assertEquals(alienHealth, expectedAlienHealth);
-        Assert.assertEquals(rayGunAmmo, expectedRayGunAmmo);
-        Assert.assertEquals(isAlienDead, expectedAlienIsDead);
+        assertEquals(alienHealth, expectedAlienHealth);
+        assertEquals(rayGunAmmo, expectedRayGunAmmo);
+        assertEquals(isAlienDead, expectedAlienIsDead);
 
     }
 
@@ -88,9 +94,9 @@ public class RaygunTest {
         isAlienDead = testAlien.isDead(); //check to see if dead
 
         //Assert
-        Assert.assertEquals(alienHealth, expectedAlienHealth);
-        Assert.assertEquals(rayGunAmmo, expectedRayGunAmmo);
-        Assert.assertEquals(isAlienDead, expectedAlienIsDead);
+        assertEquals(alienHealth, expectedAlienHealth);
+        assertEquals(rayGunAmmo, expectedRayGunAmmo);
+        assertEquals(isAlienDead, expectedAlienIsDead);
     }
 
     @Test
@@ -114,9 +120,9 @@ public class RaygunTest {
         isAlienDead = testAlien.isDead(); //check to see if dead
 
         //Assert
-        Assert.assertEquals(alienHealth, expectedAlienHealth);
-        Assert.assertEquals(rayGunAmmo, expectedRayGunAmmo);
-        Assert.assertEquals(isAlienDead, expectedAlienIsDead);
+        assertEquals(alienHealth, expectedAlienHealth);
+        assertEquals(rayGunAmmo, expectedRayGunAmmo);
+        assertEquals(isAlienDead, expectedAlienIsDead);
     }
 
 
@@ -134,7 +140,7 @@ public class RaygunTest {
         actualResult = emptyGun.getcChrg(); //use getter to find result
 
         //Assert
-        Assert.assertEquals(actualResult, expectedResult);
+        assertEquals(actualResult, expectedResult);
 
     }
 
@@ -152,7 +158,7 @@ public class RaygunTest {
         actualResult = fullGun.getcChrg(); //use getter to find result
 
         //Assert
-        Assert.assertEquals(actualResult, expectedResult);
+        assertEquals(actualResult, expectedResult);
 
     }
 
@@ -170,7 +176,7 @@ public class RaygunTest {
         actualResult = partiallyFullGun.getcChrg(); //use getter to find result
 
         //Assert
-        Assert.assertEquals(actualResult, expectedResult);
+        assertEquals(actualResult, expectedResult);
 
     }
 
@@ -187,7 +193,7 @@ public class RaygunTest {
         actualResult = fullGun.isCharged();
 
         //Assert
-        Assert.assertEquals(actualResult, expectedResult);
+        assertEquals(actualResult, expectedResult);
     }
 
     //explicit use of expectedResult to avoid confusion
@@ -203,7 +209,7 @@ public class RaygunTest {
         actualResult = emptyGun.isCharged();
 
         //Assert
-        Assert.assertEquals(actualResult, expectedResult);
+        assertEquals(actualResult, expectedResult);
     }
 
     //explicit use of expectedResult to avoid confusion
@@ -219,7 +225,7 @@ public class RaygunTest {
         actualResult = loadedButNotFullGun.isCharged();
 
         //Assert
-        Assert.assertEquals(actualResult, expectedResult);
+        assertEquals(actualResult, expectedResult);
     }
 
     @Test
@@ -234,7 +240,7 @@ public class RaygunTest {
         actualResult = fullGun.isFullyCharged();
 
         //Assert
-        Assert.assertEquals(actualResult, expectedResult);
+        assertEquals(actualResult, expectedResult);
     }
 
     @Test
@@ -249,7 +255,7 @@ public class RaygunTest {
         actualResult = emptyGun.isFullyCharged();
 
         //Assert
-        Assert.assertEquals(actualResult, expectedResult);
+        assertEquals(actualResult, expectedResult);
 
     }
 
@@ -266,7 +272,7 @@ public class RaygunTest {
         actualResult = halfFullGun.isFullyCharged();
 
         //Assert
-        Assert.assertEquals(actualResult, expectedResult);
+        assertEquals(actualResult, expectedResult);
 
     }
 
