@@ -51,4 +51,8 @@ public class Raygun {
         /*Returns true if the gun is fully charged*/
         return  false;
     }
+
+    public int getcChrg() {
+        return cChrg;
+    }
 }

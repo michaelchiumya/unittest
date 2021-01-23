@@ -83,4 +83,11 @@ public class Alien  {
         return alienHealth;
     }
 
+    public int getAlienHealth() {
+        return alienHealth;
+    }
+
+    public boolean isDead() {
+        return dead;
+    }
 }
