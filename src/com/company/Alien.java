@@ -79,15 +79,10 @@ public class Alien  {
         return dodging;
     }
 
-    public int getAlienHealth() {
-        return alienHealth;
-    }
+
 
     public int getAlienHealth() {
         return alienHealth;
     }
 
-    public boolean isDead() {
-        return dead;
-    }
 }
