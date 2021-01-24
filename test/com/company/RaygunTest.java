@@ -28,7 +28,7 @@ public class RaygunTest {
         //expected returns
         int expectedAlienHealth = alienHealth; //expect alien to dodge, so no change to health
         int expectedRayGunAmmo = rayGunAmmo-1; //gun will fire, expect ammo to reduce by 1
-        boolean expectedAlienIsDead = true; // we expect the xeno to still be alive.
+        boolean expectedAlienIsDead = false; // we expect the xeno to still be alive.
 
 
         //Act
@@ -56,7 +56,7 @@ public class RaygunTest {
         //expected returns
         int expectedAlienHealth = alienHealth; //no changes as the shot will not fire or hit
         int expectedRayGunAmmo = rayGunAmmo; //no changes as the gun should not fire
-        boolean expectedAlienIsDead = true; // we expect the xeno to still be alive.
+        boolean expectedAlienIsDead = false; // we expect the xeno to still be alive.
 
 
         //Act
@@ -85,7 +85,7 @@ public class RaygunTest {
         //expected returns
         int expectedAlienHealth = alienHealth-1; //expect alien not to dodge, so health will reduce by 1
         int expectedRayGunAmmo = rayGunAmmo-1; //gun will fire, expect ammo to reduce by 1
-        boolean expectedAlienIsDead = true; // we expect the xeno to still be alive.
+        boolean expectedAlienIsDead = false; // we expect the xeno to still be alive.
 
         //Act
         testGunFull.fireAt(testAlien);

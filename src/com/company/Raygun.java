@@ -34,17 +34,19 @@ public class Raygun {
         * bug.miss() should be called, otherwise bug.hit
         *
         *  */
-        if(isCharged())
-             this.mChrg--;
-               if(a.isDodging()){
-                  a.miss();
-               }
-                a.hit();
-    }
+        if(isCharged()) {
+            if (a.isDodging()) {
+                a.miss();
+            } else a.hit();
+            this.cChrg--;
+            }
+        }
+
 
     public void recharge() {
         //TODO: Implement the method
         /*Increases the current charge by 1*/
+        if(!isFullyCharged())
         this.cChrg = this.cChrg + 1;
     }
 
