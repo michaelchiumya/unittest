@@ -21,6 +21,8 @@ public class Raygun {
     //Class constructors
     public Raygun(int mChrg, int cChrg) {
         //TODO: Construct the Raygun object and initialise the attributes
+        this.mChrg = mChrg;
+        this.cChrg = cChrg;
     }
 
     // Methods
@@ -32,23 +34,31 @@ public class Raygun {
         * bug.miss() should be called, otherwise bug.hit
         *
         *  */
-
+        if(isCharged())
+             this.mChrg--;
+               if(a.isDodging()){
+                  a.miss();
+               }
+                a.hit();
     }
 
     public void recharge() {
         //TODO: Implement the method
         /*Increases the current charge by 1*/
+        this.cChrg = this.cChrg + 1;
     }
 
     public boolean isCharged() {
         //TODO: Implement the method
         /*Returns true if the gun has a charge*/
+        if (cChrg > 0 )  return true;
         return false;
     }
 
     public boolean isFullyCharged() {
         //TODO: Implement the method
         /*Returns true if the gun is fully charged*/
+        if(cChrg == mChrg) return true;
         return  false;
     }
 
